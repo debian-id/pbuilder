@@ -82,6 +82,14 @@ Buat simbolik link untuk masing-masing rilis BlankOn:
     $ sudo ln -s lontara nanggar
     $ sudo ln -s lontara meuligoe
 
+Bila ingin menambahkan rilis Ubuntu `wily`, `xenial` dan `yakkety` apabila Anda
+menggunakan Debian `jessie`, maka buat simbolik link untuk masing-masing rilis:
+
+    $ cd /usr/share/debootstrap/scripts
+    $ sudo ln -s gutsy wily
+    $ sudo ln -s gutsy xenial
+    $ sudo ln -s gutsy yakkety
+
 Pilih salah satu dari pilihan berikut ini:
 
     $ sudo OS=debian DIST=jessie ARCH=amd64 pbuilder --create
