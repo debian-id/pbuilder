@@ -10,9 +10,9 @@ if [ "$OS" == "debian" ]; then
         "--keyring=/usr/share/keyrings/debian-archive-keyring.gpg")
     : ${DIST:="jessie"}
     : ${ARCH:="amd64"}
-    if [ "$DIST" == "wheezy" ]; then
+    if [ "$DIST" == "jessie" ]; then
         #EXTRAPACKAGES="$EXTRAPACKAGES debian-backports-keyring"
-        OTHERMIRROR="$OTHERMIRROR | deb $MIRRORSITE wheezy-backports $COMPONENTS"
+        OTHERMIRROR="$OTHERMIRROR | deb $MIRRORSITE jessie-backports $COMPONENTS"
     fi
 elif [ "$OS" == "raspbian" ]; then
     MIRRORSITE="http://ftp.acc.umu.se/mirror/raspbian/raspbian/"
