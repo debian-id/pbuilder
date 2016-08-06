@@ -3,8 +3,8 @@
 set -e
 
 if [ "$OS" == "debian" ]; then
-#    MIRRORSITE="http://ftp.no.debian.org/debian/"
-    MIRRORSITE=http://kambing.ui.ac.id/debian/
+    #MIRRORSITE="http://ftp.no.debian.org/debian/"
+    MIRRORSITE="http://kambing.ui.ac.id/debian/"
     COMPONENTS="main contrib non-free"
     DEBOOTSTRAPOPTS=("${DEBOOTSTRAPOPTS[@]}"
         "--keyring=/usr/share/keyrings/debian-archive-keyring.gpg")
