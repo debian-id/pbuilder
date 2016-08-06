@@ -14,6 +14,12 @@ Unduh script `pbuilderrc.sh`:
     $ wget https://raw.githubusercontent.com/debian-id/pbuilder/master/pbuilderrc.sh
     $ sudo cp pbuilderrc.sh /root/.pbuilderrc
     
+**Tips**
+
+Untuk memperbaharui versi Debian pada script `pbuilderrc`:
+
+    $ sudo sed -i 's/jessie/stretch/g /root/.pbuilderrc'
+
 Unduh paket keyring dari masing-masing distribusi:
 
 **Debian**
