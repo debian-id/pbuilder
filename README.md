@@ -49,9 +49,9 @@ Apabila Anda menggunakan Raspbian:
 
 Lakukan seperti langkah pada Debian namun, lompati paket `raspbian-archive-keyring`.
 
-**Blankon**
+**BlankOn**
 
-Apabila Anda menggunakan Blankon:
+Apabila Anda menggunakan BlanOn:
 
     $ sudo apt-get install -y blankon-keyring debian-archive-keyring
 
@@ -64,6 +64,23 @@ Periksa hasilnya:
 Sebelum menjalankan pbuilder, kita harus menginstal paket `pbuilder` dan `qemu-debootstrap`:
 
     $ sudo apt-get install pbuilder qemu-user-static
+
+Unduh terlebih dahulu berkas `debootstrap` BlankOn dan pindahkan ke
+direktori `/usr/share/debootstrap/scripts`, apabila Anda menggunakan distro selain BlankOn:
+
+    $ wget http://dev.blankon.id/export/current%3A/tambora/debootstrap/scripts/ombilin
+    $ wget http://dev.blankon.id/export/current%3A/tambora/debootstrap/scripts/lontara
+    $ sudo mv ombilin /usr/share/debootstrap/scripts
+    $ sudo mv lontara /usr/share/debootstrap/scripts
+
+Buat simbolik link untuk masing-masing rilis BlankOn:
+
+    $ cd /usr/share/debootstrap/scripts
+    $ sudo ln -s ombilin rote
+    $ sudo ln -s ombilin pattimura
+    $ sudo ln -s rote suroboyo
+    $ sudo ln -s lontara nanggar
+    $ sudo ln -s lontara meuligoe
 
 Pilih salah satu dari pilihan berikut ini:
 
