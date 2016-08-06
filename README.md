@@ -65,12 +65,15 @@ Sebelum menjalankan pbuilder, kita harus menginstal paket `pbuilder` dan `qemu-d
 
     $ sudo apt-get install pbuilder qemu-user-static
 
+Pilih salah satu dari pilihan berikut ini:
 
     $ sudo OS=debian DIST=jessie ARCH=amd64 pbuilder --create
     $ sudo OS=debian DIST=jessie ARCH=i386 pbuilder --create
     $ sudo OS=debian DIST=jessie ARCH=armel pbuilder --create
     $ sudo OS=raspbian DIST=jessie ARCH=armhf pbuilder --create
     $ sudo OS=debian DIST=jessie ARCH=armhf pbuilder --create
+    $ sudo OS=ubuntu DIST=yakkety ARCH=amd64 pbuilder --create
+    $ sudo OS=blankon DIST=tambora ARCH=amd64 pbuilder --create
 
 Hasilnya dapat dilihat di:
 
