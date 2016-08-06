@@ -12,7 +12,7 @@ misal akan diunggah ke pabrik paket BlankOn, Raspbian dll.
 Unduh script `pbuilderrc.sh`:
 
     $ wget https://raw.githubusercontent.com/debian-id/pbuilder/master/pbuilderrc.sh
-    $ cp pbuilderrc.sh .pbuilderrc
+    $ sudo cp pbuilderrc.sh /root/.pbuilderrc
     
 Unduh paket keyring dari masing-masing distribusi:
 
@@ -61,15 +61,22 @@ Periksa hasilnya:
 
     $ ls /usr/share/keyrings
 
+Sebelum menjalankan pbuilder, kita harus menginstal paket `pbuilder` dan `qemu-debootstrap`:
+
+    $ sudo apt-get install pbuilder qemu-user-static
+
+
     $ sudo OS=debian DIST=jessie ARCH=amd64 pbuilder --create
     $ sudo OS=debian DIST=jessie ARCH=i386 pbuilder --create
     $ sudo OS=debian DIST=jessie ARCH=armel pbuilder --create
     $ sudo OS=raspbian DIST=jessie ARCH=armhf pbuilder --create
     $ sudo OS=debian DIST=jessie ARCH=armhf pbuilder --create
 
-Hasilnya:
+Hasilnya dapat dilihat di:
 
     $ ls /var/cache/pbuilder
+
+Sekarang kita siap untuk membangun paket. Pada dasarnya, Anda hanya perlu paket sumber dari paket Debian, masuk ke direktorinya, serta menjalankan:
 
     $ OS=raspbian DIST=jessie ARCH=armhf pdebuild
 
