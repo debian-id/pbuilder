@@ -116,5 +116,5 @@ Hasilnya dapat dilihat di:
 
 Sekarang kita siap untuk membangun paket. Pada dasarnya, Anda hanya perlu paket sumber dari paket Debian, masuk ke direktorinya, serta menjalankan:
 
-    $ OS=raspbian DIST=jessie ARCH=armhf pdebuild
+    $ sudo OS=raspbian DIST=jessie ARCH=armhf pdebuild
 
