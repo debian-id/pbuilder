@@ -118,3 +118,6 @@ Sekarang kita siap untuk membangun paket. Pada dasarnya, Anda hanya perlu paket 
 
     $ sudo OS=raspbian DIST=jessie ARCH=armhf pdebuild
 
+Untuk melakukan pembaharuan, jalankan:
+
+    $ sudo OS=raspbian DIST=jessie ARCH=armhf pbuilder --update
