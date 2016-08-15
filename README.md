@@ -125,3 +125,7 @@ Untuk memperbaharui versi Debian pada script `pbuilderrc`:
 **Tips 2**
 
 Gunakan mesin berarsitektur amd64.
+
+**Tips 3**
+
+Gunakan perkakas `apt-cacher-ng` apabila Anda sering mengulangi pembuatan paket.
