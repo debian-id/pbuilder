@@ -13,12 +13,6 @@ Unduh script `pbuilderrc.sh`:
 
     $ wget https://raw.githubusercontent.com/debian-id/pbuilder/master/pbuilderrc.sh
     $ sudo cp pbuilderrc.sh /root/.pbuilderrc
-    
-**Tips**
-
-Untuk memperbaharui versi Debian pada script `pbuilderrc`:
-
-    $ sudo sed -i 's/jessie/stretch/g /root/.pbuilderrc'
 
 Unduh paket keyring dari masing-masing distribusi:
 
@@ -121,3 +115,13 @@ Sekarang kita siap untuk membangun paket. Pada dasarnya, Anda hanya perlu paket 
 Untuk melakukan pembaharuan, jalankan:
 
     $ sudo OS=raspbian DIST=jessie ARCH=armhf pbuilder --update
+
+**Tips 1**
+
+Untuk memperbaharui versi Debian pada script `pbuilderrc`:
+
+    $ sudo sed -i 's/jessie/stretch/g /root/.pbuilderrc'
+
+**Tips 2**
+
+Gunakan mesin berarsitektur amd64.
