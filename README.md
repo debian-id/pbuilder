@@ -128,4 +128,4 @@ Gunakan mesin berarsitektur amd64.
 
 **Tips 3**
 
-Gunakan perkakas `apt-cacher-ng` apabila Anda sering mengulangi pembuatan paket.
+Gunakan perkakas [`apt-cacher-ng`](https://packages.debian.org/apt-cacher-ng) apabila Anda sering mengulangi pembuatan paket.
